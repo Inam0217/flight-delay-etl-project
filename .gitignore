@@ -1,0 +1,21 @@
+# Ignore Airflow logs
+airflow/logs/
+
+# Ignore pycache
+__pycache__/
+
+# Ignore env files
+.env
+
+# Ignore Docker system files
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.log
+*.sqlite3
+*.pid
+
+# Ignore IDE/config files
+.vscode/
+.idea/
