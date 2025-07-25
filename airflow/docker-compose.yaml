@@ -4,9 +4,8 @@ services:
   mysql:
     image: mysql:8
     container_name: mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: kashar0217
-      MYSQL_DATABASE: flights_db
+    env_file:
+      - .env
     ports:
       - "3306:3306"
     volumes:
@@ -18,10 +17,8 @@ services:
   postgres:
     image: postgres:13
     container_name: postgres
-    environment:
-      POSTGRES_USER: airflow
-      POSTGRES_PASSWORD: airflow
-      POSTGRES_DB: airflow
+    env_file:
+      - .env
     volumes:
       - postgres-db-volume:/var/lib/postgresql/data
     networks:
@@ -34,10 +31,6 @@ services:
     depends_on:
       - postgres
       - mysql
-    environment:
-      AIRFLOW__CORE__EXECUTOR: LocalExecutor
-      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-      AIRFLOW__WEBSERVER__SECRET_KEY: my_secret_key
     env_file:
       - .env
     volumes:
@@ -46,7 +39,6 @@ services:
       - ./plugins:/opt/airflow/plugins
       - ./data:/opt/airflow/data
       - ./scripts:/opt/airflow/scripts
-      - ./.env:/opt/airflow/.env  
     ports:
       - "8080:8080"
     networks:
@@ -60,9 +52,6 @@ services:
     depends_on:
       - postgres
       - mysql
-    environment:
-      AIRFLOW__CORE__EXECUTOR: LocalExecutor
-      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     env_file:
       - .env
     volumes:
@@ -71,7 +60,6 @@ services:
       - ./plugins:/opt/airflow/plugins
       - ./data:/opt/airflow/data
       - ./scripts:/opt/airflow/scripts
-      - ./.env:/opt/airflow/.env 
     networks:
       - airflow-net
     command: scheduler
