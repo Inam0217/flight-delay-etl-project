@@ -34,8 +34,6 @@ flight_etl_project/
 
 ---
 
-## ⚙️ How to Run the Project
-=======
 ## ⚙️ How to Run
 
 1. **Clone the repository:**
@@ -79,9 +77,7 @@ The Airflow DAG flights_etl_dag.py includes:
 - Load Task: Inserts cleaned data into a MySQL database (flights_db)
 - Schedule: Can be triggered manually or set to run daily
 - Retries: Configured with 1 retry (delay: 5 minutes)
-
-<<<<<<< HEAD
-=======
+- 
 ---
 
 ### 🔍 Airflow UI Snapshot
@@ -100,7 +96,6 @@ Below is a snapshot of the cleaned flight delay data successfully loaded into My
 
 ---
 
->>>>>>> b3965afdf2b45b990f90ea140740f35e78e2a33e
 ## 📦 Sample Output (MySQL Table)
 
 | year | month | day | airline | flight_number | origin | destination | dep_delay | arr_delay | distance |
@@ -137,7 +132,3 @@ This diagram represents the flow of data from raw CSV to final storage using the
 Inam Ul Hassan
 📧 inamaitazaz1998@gmail.com
 🔗 GitHub: Inam0217
-<<<<<<< HEAD
-=======
-  
->>>>>>> b3965afdf2b45b990f90ea140740f35e78e2a33e
