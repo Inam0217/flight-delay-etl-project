@@ -34,11 +34,9 @@ flight_etl_project/
 
 ---
 
-<<<<<<< HEAD
 ## ⚙️ How to Run the Project
 =======
-## ⚙️ How to Run 
->>>>>>> b3965afdf2b45b990f90ea140740f35e78e2a33e
+## ⚙️ How to Run
 
 1. **Clone the repository:**
 
