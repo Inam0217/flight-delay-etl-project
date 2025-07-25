@@ -78,6 +78,16 @@ The Airflow DAG flights_etl_dag.py includes:
 - Schedule: Can be triggered manually or set to run daily
 - Retries: Configured with 1 retry (delay: 5 minutes)
 
+---
+
+### 🔍 Airflow UI Snapshot
+
+Below is the screenshot of a successful DAG run:
+
+![Airflow DAG Screenshot](images/airflow_dag_ui.png)
+
+---
+
 ## 📦 Sample Output (MySQL Table)
 
 | year | month | day | airline | flight_number | origin | destination | dep_delay | arr_delay | distance |
