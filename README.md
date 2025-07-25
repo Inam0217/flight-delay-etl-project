@@ -84,7 +84,7 @@ The Airflow DAG flights_etl_dag.py includes:
 
 Below is the screenshot of a successful DAG run:
 
-![Airflow DAG Screenshot](images/airflow_dag_ui)
+![Airflow DAG Screenshot](images/airflow_dag_ui.png)
 
 ---
 
@@ -92,7 +92,7 @@ Below is the screenshot of a successful DAG run:
 
 Below is a snapshot of the cleaned flight delay data successfully loaded into MySQL (`flight_data` table):
 
-![MySQL Output Screenshot](images/mysql_table_output)
+![MySQL Output Screenshot](images/mysql_table_output.png)
 
 ---
 
