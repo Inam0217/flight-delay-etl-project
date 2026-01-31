@@ -111,9 +111,10 @@ Below is a snapshot of the cleaned flight delay data successfully loaded into My
 ## 🔁 ETL Workflow Diagram
 
 graph TD
-    A[CSV File] --> B[Python Cleaning Script]
-    B --> C[Airflow DAG]
-    C --> D[MySQL Database]
+A[CSV Dataset] --> B[Python (pandas) Cleaning]
+B --> C[Airflow DAG]
+C --> D[MySQL (flight_data table)]
+D --> E[Validation Queries / Sample Output]
 
 This diagram represents the flow of data from raw CSV to final storage using the ETL pipeline.
 
